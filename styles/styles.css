@@ -104,6 +104,10 @@ footer {
   align-items: center;
 }
 
+.accordion-body {
+  background-color: #96aedd;
+}
+
 /* Aplicando mixin */
 body {
   background: #96aedd;
