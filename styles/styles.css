@@ -1,0 +1,243 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&family=Roboto:ital@0;1&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos SASS */
+/* Variables */
+/* Partials */
+/* Nesting */
+/* Diseño de páginas hecho con Grids */
+.contenedor {
+  width: 100%;
+  max-width: 2000px;
+  margin: 20px auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "header header header" "contenido contenido sidebar" "contenido contenido sidebar" "footer footer footer";
+}
+.contenedor .sidebar {
+  grid-column: 3/4;
+  background: #23315e;
+  margin-right: 20px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  min-height: 100px;
+  grid-area: sidebar;
+}
+.contenedor .contenido {
+  grid-area: contenido;
+}
+.contenedor .header {
+  background: #23315e;
+  color: #fff;
+  grid-area: header;
+}
+.contenedor .footer {
+  background: #23315e;
+  grid-area: footer;
+}
+
+/* Pisado de Bootstrap */
+.logobanner {
+  height: 150px;
+}
+
+.sidebarInicio {
+  width: 100%;
+}
+
+.colorfisioesteticspa {
+  background-color: #23315e;
+}
+
+/* CSS de la galería (hecha con Flexbox)*/
+.gallery {
+  width: 100%;
+  border: 5px groove #23315e;
+}
+
+.fila {
+  display: flex;
+  padding: 50px;
+  flex-wrap: wrap;
+}
+
+.columna {
+  flex: 25%;
+}
+.columna .gallery {
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Media Queries adicionales (para la galería) */
+@media (max-width: 1000px) {
+  .columna {
+    flex: 30%;
+  }
+}
+@media (max-width: 800px) {
+  .columna {
+    flex: 50%;
+  }
+}
+@media (max-width: 600px) {
+  .columna {
+    flex: 100%;
+  }
+}
+footer {
+  background: #23315e;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Aplicando mixin */
+body {
+  background: #96aedd;
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  margin-left: 40px;
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+
+/* Diseño de páginas hecho con Grids */
+.contenedor > div,
+.contenedor .contenido .contenedor .sidebar .contenedor .footer {
+  background: #fff;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+/* Responsive disposición de páginas*/
+@media screen and (max-width: 768px) {
+  .contenedor {
+    grid-template-areas: "header header header" "contenido contenido contenido" "sidebar sidebar sidebar" "footer footer footer";
+  }
+}
+.noSidebar {
+  margin-right: 1.5%;
+  margin-bottom: 20%;
+  margin-top: 2%;
+}
+
+/* animaciones con AOS*/
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 35vh;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.container::after {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background: #1b3231;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 1px);
+  z-index: 1;
+}
+
+.evento {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 200px;
+  position: relative;
+}
+
+.evento::after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 100px;
+  background: #DCDFD9;
+  border: 2px solid #1b3231;
+  position: absolute;
+  z-index: 2;
+  top: calc(50% - 9px);
+  left: calc(50% - 9px);
+}
+
+.servicio {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: calc(42% + 20px);
+  font-size: 32px;
+  font-weight: normal;
+}
+
+.foto {
+  width: 42%;
+  border: 10px solid #fff;
+  position: relative;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.foto::after {
+  content: "";
+  display: block;
+  border: 20px solid transparent;
+  border-left: 20px solid #fff;
+  position: absolute;
+  right: -50px;
+  top: calc(50% - 20px);
+}
+
+.foto img {
+  width: 100%;
+  vertical-align: top;
+}
+
+.evento:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.evento:nth-child(even) .servicio {
+  justify-content: end;
+}
+
+.evento:nth-child(even) .foto::after {
+  content: "";
+  border: 20px solid transparent;
+  border-right: 20px solid #fff;
+  right: initial;
+  left: -50px;
+}/*# sourceMappingURL=styles.css.map */
