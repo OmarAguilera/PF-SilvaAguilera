@@ -58,54 +58,12 @@
   background-color: #23315e;
 }
 
-/* CSS de la galería (hecha con Flexbox)*/
-.gallery {
-  width: 100%;
-  border: 5px groove #23315e;
-}
-
-.fila {
-  display: flex;
-  padding: 50px;
-  flex-wrap: wrap;
-}
-
-.columna {
-  flex: 25%;
-}
-.columna .gallery {
-  grid-row-gap: 20px;
-  grid-column-gap: 20px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-/* Media Queries adicionales (para la galería) */
-@media (max-width: 1000px) {
-  .columna {
-    flex: 30%;
-  }
-}
-@media (max-width: 800px) {
-  .columna {
-    flex: 50%;
-  }
-}
-@media (max-width: 600px) {
-  .columna {
-    flex: 100%;
-  }
-}
-footer {
-  background: #23315e;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .accordion-body {
   background-color: #96aedd;
+}
+
+.ParraphAboveAccordion {
+  margin-bottom: 100px;
 }
 
 /* Aplicando mixin */
@@ -158,7 +116,7 @@ h1 {
   text-transform: uppercase;
 }
 
-.container {
+.container1 {
   width: 90%;
   max-width: 1200px;
   margin: 100px auto;
@@ -167,7 +125,7 @@ h1 {
   position: relative;
 }
 
-.container::after {
+.container1::after {
   content: "";
   width: 2px;
   height: 100%;
@@ -244,4 +202,31 @@ h1 {
   border-right: 20px solid #fff;
   right: initial;
   left: -50px;
+}
+
+#gallery .col-lg-4 {
+  margin: 0;
+  padding: 25px;
+}
+
+#gallery img {
+  width: 100%;
+  height: 250px;
+}
+
+#gallery .col--3 {
+  width: 100%;
+  height: 250px;
+}
+
+#gallery img:hover {
+  border: 5px solid #23315e;
+}
+
+footer {
+  background: #23315e;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=styles.css.map */
