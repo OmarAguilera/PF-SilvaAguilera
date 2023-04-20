@@ -59,7 +59,6 @@ h1 {
     }
 }
 
-
 .noSidebar {
     margin-right: 1.5%;
     margin-bottom: 20%;
@@ -72,7 +71,7 @@ h1 {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	min-height: 35vh;
+	min-height: 3vh;
 	font-size: 36px;
 	text-transform: uppercase;
 }
@@ -192,12 +191,12 @@ footer {
     align-items: center;
 }
 
-.contactMedia {
-	margin: 20px 0 0 200px;
-}
-
-.contactMedia {
-	display: flex;
-	align-items: center;
-	align
+@media screen and (max-width: 768px) {
+    .servicio {
+    font-size: 20px;
+  }
+@media screen and (max-width: 768px) {
+    .texts{
+    font-size: 20px;
+  }
 }

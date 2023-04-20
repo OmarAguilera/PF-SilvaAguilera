@@ -229,4 +229,18 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-}/*# sourceMappingURL=styles.css.map */
+}
+@media screen and (max-width: 768px) {
+    .servicio {
+    font-size: 20px;
+  }
+@media screen and (max-width: 768px) {
+    .texts{
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+    .titles { 
+    font-size: 40px;
+  }
+/*# sourceMappingURL=styles.css.map */
